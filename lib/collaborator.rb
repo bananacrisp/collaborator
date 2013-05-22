@@ -50,7 +50,7 @@ end
 
   get '/' do
     puts params.inspect
-    erb :login_form # check if the KV pair exists in mongoDB and if so, allow entry
+    erb :index, layout: false # check if the KV pair exists in mongoDB and if so, allow entry
   end
 
   post '/login' do
@@ -104,7 +104,7 @@ end
   end
 
   get '/groups' do
-    erb(:list_of_groups, locals: { :groups => Group.all })
+    Group.all.to_json
   end
 
   # +=+=+=+ DELETE GROUP MODULE +=+=+=+ #

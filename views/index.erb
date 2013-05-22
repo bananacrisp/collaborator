@@ -4,7 +4,7 @@
     <!-- Including our Stylesheets -->
     <link rel="stylesheet" type="text/css" href='/css/bootstrap.css'>
     <link rel="stylesheet" type="text/css" href='/css/flat-ui.css'>
-  	<link rel="stylesheet" type="text/css" href='/css/style.css'>
+    <link rel="stylesheet" type="text/css" href='/css/style.css'>
     <script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
 
@@ -28,9 +28,27 @@
       </nav>
     </header>
 
-  	<section class="main">
-	    <p><%= yield %></p>
-	  </section>
+    <section class="main">
+    </section>
+
+
+    <script type="text/template" id="login_template">
+      <article class='span4 login-account'>
+        <header>
+        <h2>Please Login</h2>
+        </header>
+        <span id="login-form">
+          <input id="username" type='text' name='username' placeholder='username' />
+          <input id="password" type='password' name='password' placeholder='password' />
+          <span class="btn" id="login">Login</span>
+        </span>
+      </article>
+    </script>
+    <script type="text/javascript" src="/js/collaborator.js"></script>
+    <script type="text/javascript">
+      var collaborator = new Collaborator;
+      Backbone.history.start();
+    </script>
 
 
  </body>

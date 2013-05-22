@@ -197,3 +197,7 @@ header {
 	text-decoration: none;
 }
 
+.group-holder > #groupId, .group-holder > span {
+	float: right;
+}
+
